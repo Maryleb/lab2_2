@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;500&amp;family=League+Spartan:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <script src="http://d3js.org/d3.v7.min.js"></script>
   </head>
   <body>
     <div class="central_block">
@@ -17,7 +18,7 @@
       </div>
             <div class="menu">
               <div class="menu1"><a class="menu_item" href="index.html"><img class="logo" src="img/logo.png"/></a></div>
-              <div class="menu2"><a class="menu_item active" href="pats.html">Наши питомцы</a><a class="menu_item" href="">Проекты</a><a class="menu_item" href="">Питомники</a><a class="menu_item" href="">Фотоотчеты</a><a class="menu_item" href="favorite.html">Избранное</a></div>
+              <div class="menu2"><a class="menu_item active" href="pats.html">Наши питомцы</a><a class="menu_item" href="">Проекты</a><a class="menu_item" href="">Питомники</a><a class="menu_item" href="photos.html">Фотоотчеты</a><a class="menu_item" href="favorite.html">Избранное</a></div>
               <div class="menu3">
                 <p class="greytxt">Связь с нами</p>
                 <p class="number">+7 (423) 279-07-47</p>
@@ -31,17 +32,17 @@
             <summary>График</summary>
             <form>
               <p>Значение по оси ОХ <br>
-                <input type="checkbox" name="category" value="0"/>&nbsp Порода <br>
-                <input type="checkbox" name="category" value="1"/>&nbsp Год рождения <br>
-                <input type="checkbox" name="category" value="2"/>&nbsp Окрас <br>
+                <input type="radio" name="categoryX" value="brade" checked/>&nbsp Порода <br>
+                <input type="radio" name="categoryX" value="year"/>&nbsp Год рождения <br>
+                <input type="radio" name="categoryX" value="color"/>&nbsp Окрас <br>
               </p>
-            </form>
-            <form>
               <p>Результат <br>
-                <input type="checkbox" name="category" value="0"/>&nbsp Средний вес <br>
-                <input type="checkbox" name="category" value="1"/>&nbsp Количество кошек<br>
+                <input type="radio" name="categoryY" value="weight"/>&nbsp Средний вес <br>
+                <input type="radio" name="categoryY" value="sum"/>&nbsp Количество кошек<br>
               </p>
+              <input type="button" value="Построить" onclick="drawGraph(this.form, this.form.categoryX.value, this.form.categoryY.value)">
             </form>
+            <svg height="1"></svg>
           </details>
         </div>
         <div class="graph">
@@ -125,7 +126,7 @@
             <td>-</td>
             <td>2019</td>
             <td>Черно-белый</td>
-            <td>39</td>
+            <td>3.9</td>
           </tr>
           <tr>
             <td>Ницца</td>
@@ -202,7 +203,7 @@
             <td>Аббисинская</td>
             <td>2016</td>
             <td>Белый</td>
-            <td>21</td>
+            <td>2.1</td>
           </tr>
           <tr>
             <td>Пират</td>
@@ -216,7 +217,7 @@
             <td>Аббисинская</td>
             <td>2020</td>
             <td>Коричневый</td>
-            <td>27</td>
+            <td>2.7</td>
           </tr>
           <tr>
             <td>Пеликан</td>

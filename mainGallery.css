@@ -1,0 +1,26 @@
+body {
+  width: 80%;
+  margin: auto;
+  font-family: 'Jost', sans-serif;
+  
+}
+
+.element-1 {
+  display: flex;
+  flex-wrap: wrap;
+  border: orange 3px double;
+  padding: 20px;
+  border-radius: 5%;
+}
+
+.element-1 a {
+  width: 25%;
+  box-sizing: border-box;
+  padding: .5rem;
+}
+
+.element-1 img {
+  width: 100%;
+  display: flex;
+  border-radius: 10%;
+}

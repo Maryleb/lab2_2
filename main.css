@@ -209,3 +209,16 @@ table td {
     font-size: 10px;
   }
 }
+svg text {
+  font: 8px Verdana;
+ }
+ svg path, line {
+  fill: none;
+  stroke: #333333;
+  width: 1px;
+ }
+ svg .grid-line {
+  stroke: black;
+  shape-rendering: crispedges;
+  stroke-opacity: 0.1;
+ }
